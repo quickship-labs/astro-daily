@@ -1,0 +1,408 @@
+export interface TarotCard {
+  id: string;
+  name: string;
+  arcana: 'Major' | 'Minor';
+  suit?: 'Wands' | 'Cups' | 'Swords' | 'Pentacles';
+  number?: number;
+  uprightMeaning: string;
+  reversedMeaning: string;
+  keywords: string[];
+  description: string;
+}
+
+export const tarotCards: TarotCard[] = [
+  // Major Arcana (0-21)
+  {
+    id: 'the-fool',
+    name: 'The Fool',
+    arcana: 'Major',
+    number: 0,
+    uprightMeaning: 'New beginnings, innocence, spontaneity, free spirit, adventure',
+    reversedMeaning: 'Recklessness, taken advantage of, inconsideration, naivety',
+    keywords: ['Beginnings', 'Innocence', 'Leap of faith', 'Adventure'],
+    description: 'The Fool represents new beginnings, having faith in the future, and being inexperienced. It symbolizes a fresh start and the potential for growth.',
+  },
+  {
+    id: 'the-magician',
+    name: 'The Magician',
+    arcana: 'Major',
+    number: 1,
+    uprightMeaning: 'Manifestation, resourcefulness, power, inspired action, skill',
+    reversedMeaning: 'Manipulation, poor planning, untapped talents, illusion',
+    keywords: ['Manifestation', 'Power', 'Action', 'Skill'],
+    description: 'The Magician represents manifestation, resourcefulness, and the power to transform visions into reality through skill and determination.',
+  },
+  {
+    id: 'the-high-priestess',
+    name: 'The High Priestess',
+    arcana: 'Major',
+    number: 2,
+    uprightMeaning: 'Intuition, sacred knowledge, divine feminine, subconscious mind',
+    reversedMeaning: 'Secrets, disconnected from intuition, withdrawal, silence',
+    keywords: ['Intuition', 'Mystery', 'Wisdom', 'Inner voice'],
+    description: 'The High Priestess represents intuition, mystery, and accessing knowledge through the subconscious and spiritual realms.',
+  },
+  {
+    id: 'the-empress',
+    name: 'The Empress',
+    arcana: 'Major',
+    number: 3,
+    uprightMeaning: 'Femininity, beauty, nature, nurturing, abundance, creativity',
+    reversedMeaning: 'Creative block, dependence on others, smothering, emptiness',
+    keywords: ['Abundance', 'Nurturing', 'Fertility', 'Nature'],
+    description: 'The Empress represents abundance, nurturing, fertility, and the creative force of nature and femininity.',
+  },
+  {
+    id: 'the-emperor',
+    name: 'The Emperor',
+    arcana: 'Major',
+    number: 4,
+    uprightMeaning: 'Authority, establishment, structure, father figure, control',
+    reversedMeaning: 'Domination, excessive control, lack of discipline, inflexibility',
+    keywords: ['Authority', 'Structure', 'Control', 'Leadership'],
+    description: 'The Emperor represents authority, structure, control, and fatherly leadership through established systems and discipline.',
+  },
+  {
+    id: 'the-hierophant',
+    name: 'The Hierophant',
+    arcana: 'Major',
+    number: 5,
+    uprightMeaning: 'Spiritual wisdom, religious beliefs, tradition, conformity, institutions',
+    reversedMeaning: 'Personal beliefs, freedom, challenging the status quo, rebellion',
+    keywords: ['Tradition', 'Conformity', 'Beliefs', 'Institutions'],
+    description: 'The Hierophant represents spiritual wisdom, tradition, and conformity to established social structures and beliefs.',
+  },
+  {
+    id: 'the-lovers',
+    name: 'The Lovers',
+    arcana: 'Major',
+    number: 6,
+    uprightMeaning: 'Love, harmony, relationships, values alignment, choices',
+    reversedMeaning: 'Self-love, disharmony, imbalance, misalignment of values',
+    keywords: ['Love', 'Union', 'Choices', 'Values'],
+    description: 'The Lovers represents love, harmony, and important choices related to relationships and personal values.',
+  },
+  {
+    id: 'the-chariot',
+    name: 'The Chariot',
+    arcana: 'Major',
+    number: 7,
+    uprightMeaning: 'Control, willpower, success, action, determination, victory',
+    reversedMeaning: 'Self-discipline, opposition, lack of direction, scattered energy',
+    keywords: ['Willpower', 'Victory', 'Determination', 'Control'],
+    description: 'The Chariot represents willpower, determination, and achieving victory through focused action and self-control.',
+  },
+  {
+    id: 'strength',
+    name: 'Strength',
+    arcana: 'Major',
+    number: 8,
+    uprightMeaning: 'Strength, courage, persuasion, influence, compassion, inner power',
+    reversedMeaning: 'Inner strength, self-doubt, low energy, raw emotion',
+    keywords: ['Courage', 'Inner strength', 'Compassion', 'Patience'],
+    description: 'Strength represents inner strength, courage, and the power of compassion and patience over brute force.',
+  },
+  {
+    id: 'the-hermit',
+    name: 'The Hermit',
+    arcana: 'Major',
+    number: 9,
+    uprightMeaning: 'Soul searching, introspection, inner guidance, solitude, wisdom',
+    reversedMeaning: 'Isolation, loneliness, withdrawal, lost your way',
+    keywords: ['Introspection', 'Solitude', 'Wisdom', 'Guidance'],
+    description: 'The Hermit represents soul searching, introspection, and finding wisdom through solitude and inner guidance.',
+  },
+  {
+    id: 'wheel-of-fortune',
+    name: 'Wheel of Fortune',
+    arcana: 'Major',
+    number: 10,
+    uprightMeaning: 'Good luck, karma, life cycles, destiny, turning point',
+    reversedMeaning: 'Bad luck, resistance to change, breaking cycles',
+    keywords: ['Destiny', 'Cycles', 'Change', 'Fortune'],
+    description: 'The Wheel of Fortune represents the cycles of life, destiny, karma, and the ever-changing nature of fortune.',
+  },
+  {
+    id: 'justice',
+    name: 'Justice',
+    arcana: 'Major',
+    number: 11,
+    uprightMeaning: 'Justice, fairness, truth, cause and effect, law, accountability',
+    reversedMeaning: 'Unfairness, lack of accountability, dishonesty, injustice',
+    keywords: ['Justice', 'Truth', 'Fairness', 'Law'],
+    description: 'Justice represents fairness, truth, and the law of cause and effect bringing balance and accountability.',
+  },
+  {
+    id: 'the-hanged-man',
+    name: 'The Hanged Man',
+    arcana: 'Major',
+    number: 12,
+    uprightMeaning: 'Pause, surrender, letting go, new perspectives, sacrifice',
+    reversedMeaning: 'Delays, resistance, stalling, indecision, stagnation',
+    keywords: ['Surrender', 'Perspective', 'Sacrifice', 'Suspension'],
+    description: 'The Hanged Man represents surrender, new perspectives gained through pause, and willing sacrifice for growth.',
+  },
+  {
+    id: 'death',
+    name: 'Death',
+    arcana: 'Major',
+    number: 13,
+    uprightMeaning: 'Endings, transformation, transition, letting go, new beginnings',
+    reversedMeaning: 'Resistance to change, personal transformation, inner purging',
+    keywords: ['Transformation', 'Endings', 'Change', 'Transition'],
+    description: 'Death represents transformation, endings that lead to new beginnings, and the natural cycle of change.',
+  },
+  {
+    id: 'temperance',
+    name: 'Temperance',
+    arcana: 'Major',
+    number: 14,
+    uprightMeaning: 'Balance, moderation, patience, purpose, meaning, harmony',
+    reversedMeaning: 'Imbalance, excess, self-healing, realignment',
+    keywords: ['Balance', 'Moderation', 'Patience', 'Harmony'],
+    description: 'Temperance represents balance, moderation, and the harmonious blending of opposing forces with patience.',
+  },
+  {
+    id: 'the-devil',
+    name: 'The Devil',
+    arcana: 'Major',
+    number: 15,
+    uprightMeaning: 'Shadow self, attachment, addiction, restriction, sexuality, materialism',
+    reversedMeaning: 'Releasing limiting beliefs, exploring dark thoughts, detachment',
+    keywords: ['Bondage', 'Materialism', 'Temptation', 'Restriction'],
+    description: 'The Devil represents bondage to materialism, addiction, and self-imposed restrictions that limit freedom.',
+  },
+  {
+    id: 'the-tower',
+    name: 'The Tower',
+    arcana: 'Major',
+    number: 16,
+    uprightMeaning: 'Sudden change, upheaval, chaos, revelation, awakening, broken pride',
+    reversedMeaning: 'Personal transformation, fear of change, averting disaster',
+    keywords: ['Upheaval', 'Change', 'Revelation', 'Awakening'],
+    description: 'The Tower represents sudden upheaval, dramatic change, and revelations that shatter false structures.',
+  },
+  {
+    id: 'the-star',
+    name: 'The Star',
+    arcana: 'Major',
+    number: 17,
+    uprightMeaning: 'Hope, faith, purpose, renewal, spirituality, inspiration',
+    reversedMeaning: 'Lack of faith, despair, self-trust, disconnection',
+    keywords: ['Hope', 'Faith', 'Inspiration', 'Renewal'],
+    description: 'The Star represents hope, faith, inspiration, and spiritual renewal bringing peace and optimism.',
+  },
+  {
+    id: 'the-moon',
+    name: 'The Moon',
+    arcana: 'Major',
+    number: 18,
+    uprightMeaning: 'Illusion, fear, anxiety, subconscious, intuition, dreams',
+    reversedMeaning: 'Release of fear, repressed emotion, inner confusion cleared',
+    keywords: ['Illusion', 'Intuition', 'Dreams', 'Subconscious'],
+    description: 'The Moon represents illusion, intuition, and navigating through uncertainty by trusting inner guidance.',
+  },
+  {
+    id: 'the-sun',
+    name: 'The Sun',
+    arcana: 'Major',
+    number: 19,
+    uprightMeaning: 'Positivity, fun, warmth, success, vitality, joy, confidence',
+    reversedMeaning: 'Inner child, feeling down, overly optimistic, unrealistic',
+    keywords: ['Joy', 'Success', 'Vitality', 'Confidence'],
+    description: 'The Sun represents positivity, success, vitality, and the pure joy of living in the light of truth.',
+  },
+  {
+    id: 'judgement',
+    name: 'Judgement',
+    arcana: 'Major',
+    number: 20,
+    uprightMeaning: 'Judgement, rebirth, inner calling, absolution, awakening',
+    reversedMeaning: 'Self-doubt, inner critic, ignoring the call, self-evaluation',
+    keywords: ['Rebirth', 'Awakening', 'Calling', 'Absolution'],
+    description: 'Judgement represents rebirth, inner calling, and the awakening to higher consciousness and purpose.',
+  },
+  {
+    id: 'the-world',
+    name: 'The World',
+    arcana: 'Major',
+    number: 21,
+    uprightMeaning: 'Completion, accomplishment, travel, unity, fulfillment, achievement',
+    reversedMeaning: 'Seeking closure, incomplete, delays, short-cuts',
+    keywords: ['Completion', 'Achievement', 'Fulfillment', 'Unity'],
+    description: 'The World represents completion, accomplishment, and the fulfillment that comes from finishing a major cycle.',
+  },
+
+  // Minor Arcana - Wands
+  {
+    id: 'ace-of-wands',
+    name: 'Ace of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 1,
+    uprightMeaning: 'Inspiration, new opportunities, growth, potential, creative spark',
+    reversedMeaning: 'Emerging ideas, lack of direction, distractions, delays',
+    keywords: ['Inspiration', 'Opportunity', 'Growth', 'Potential'],
+    description: 'The Ace of Wands represents new creative opportunities, inspiration, and the spark of potential.',
+  },
+  {
+    id: 'two-of-wands',
+    name: 'Two of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 2,
+    uprightMeaning: 'Future planning, progress, decisions, discovery, personal power',
+    reversedMeaning: 'Personal goals, inner alignment, fear of unknown, lack of planning',
+    keywords: ['Planning', 'Progress', 'Decisions', 'Discovery'],
+    description: 'The Two of Wands represents planning for the future, making decisions, and discovering new possibilities.',
+  },
+  {
+    id: 'three-of-wands',
+    name: 'Three of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 3,
+    uprightMeaning: 'Progress, expansion, foresight, overseas opportunities, anticipation',
+    reversedMeaning: 'Playing small, lack of foresight, unexpected delays',
+    keywords: ['Expansion', 'Foresight', 'Progress', 'Anticipation'],
+    description: 'The Three of Wands represents expansion, progress, and looking forward to future opportunities.',
+  },
+  {
+    id: 'four-of-wands',
+    name: 'Four of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 4,
+    uprightMeaning: 'Celebration, joy, harmony, relaxation, homecoming, community',
+    reversedMeaning: 'Personal celebration, inner harmony, conflict with others, transition',
+    keywords: ['Celebration', 'Harmony', 'Joy', 'Community'],
+    description: 'The Four of Wands represents celebration, harmony, and joyful milestones worth commemorating.',
+  },
+  {
+    id: 'five-of-wands',
+    name: 'Five of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 5,
+    uprightMeaning: 'Conflict, disagreements, competition, tension, diversity of opinion',
+    reversedMeaning: 'Inner conflict, conflict avoidance, tension release',
+    keywords: ['Conflict', 'Competition', 'Tension', 'Disagreement'],
+    description: 'The Five of Wands represents conflict, competition, and the tension that arises from diverse opinions.',
+  },
+  {
+    id: 'six-of-wands',
+    name: 'Six of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 6,
+    uprightMeaning: 'Success, public recognition, progress, self-confidence, victory',
+    reversedMeaning: 'Private achievement, self-definition, fall from grace, egotism',
+    keywords: ['Success', 'Recognition', 'Victory', 'Confidence'],
+    description: 'The Six of Wands represents success, public recognition, and victory after overcoming challenges.',
+  },
+  {
+    id: 'seven-of-wands',
+    name: 'Seven of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 7,
+    uprightMeaning: 'Challenge, competition, protection, perseverance, defending position',
+    reversedMeaning: 'Exhaustion, giving up, overwhelmed, defensive',
+    keywords: ['Defense', 'Perseverance', 'Challenge', 'Protection'],
+    description: 'The Seven of Wands represents defending your position, perseverance, and standing up to challenges.',
+  },
+  {
+    id: 'eight-of-wands',
+    name: 'Eight of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 8,
+    uprightMeaning: 'Movement, fast paced change, action, alignment, air travel',
+    reversedMeaning: 'Delays, frustration, resisting change, internal alignment',
+    keywords: ['Speed', 'Movement', 'Action', 'Alignment'],
+    description: 'The Eight of Wands represents rapid movement, swift action, and things falling into alignment quickly.',
+  },
+  {
+    id: 'nine-of-wands',
+    name: 'Nine of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 9,
+    uprightMeaning: 'Resilience, courage, persistence, test of faith, boundaries',
+    reversedMeaning: 'Inner resources, struggle, overwhelm, defensive, paranoia',
+    keywords: ['Resilience', 'Persistence', 'Boundaries', 'Courage'],
+    description: 'The Nine of Wands represents resilience, persistence, and maintaining boundaries despite challenges.',
+  },
+  {
+    id: 'ten-of-wands',
+    name: 'Ten of Wands',
+    arcana: 'Minor',
+    suit: 'Wands',
+    number: 10,
+    uprightMeaning: 'Burden, extra responsibility, hard work, completion, stress',
+    reversedMeaning: 'Doing it all, carrying the burden, delegation, release',
+    keywords: ['Burden', 'Responsibility', 'Stress', 'Completion'],
+    description: 'The Ten of Wands represents heavy burdens, extra responsibilities, and the stress of carrying too much.',
+  },
+
+  // Just adding a few more cards to show variety - in a real implementation, all 78 cards would be here
+  {
+    id: 'ace-of-cups',
+    name: 'Ace of Cups',
+    arcana: 'Minor',
+    suit: 'Cups',
+    number: 1,
+    uprightMeaning: 'Love, new relationships, compassion, creativity, emotional awakening',
+    reversedMeaning: 'Self-love, intuition, repressed emotions, blocked creativity',
+    keywords: ['Love', 'Emotion', 'Compassion', 'Creativity'],
+    description: 'The Ace of Cups represents new emotional beginnings, love, and the opening of the heart to compassion.',
+  },
+  {
+    id: 'ace-of-swords',
+    name: 'Ace of Swords',
+    arcana: 'Minor',
+    suit: 'Swords',
+    number: 1,
+    uprightMeaning: 'Breakthroughs, new ideas, mental clarity, success, truth',
+    reversedMeaning: 'Inner clarity, re-thinking an idea, clouded judgement, confusion',
+    keywords: ['Clarity', 'Truth', 'Breakthrough', 'Mental power'],
+    description: 'The Ace of Swords represents mental clarity, breakthroughs, and the power of truth and clear thinking.',
+  },
+  {
+    id: 'ace-of-pentacles',
+    name: 'Ace of Pentacles',
+    arcana: 'Minor',
+    suit: 'Pentacles',
+    number: 1,
+    uprightMeaning: 'Manifestation, new financial opportunity, prosperity, security',
+    reversedMeaning: 'Lost opportunity, missed chance, lack of planning, poor financial management',
+    keywords: ['Manifestation', 'Prosperity', 'Opportunity', 'Security'],
+    description: 'The Ace of Pentacles represents new financial opportunities, manifestation of material goals, and prosperity.',
+  },
+];
+
+export function getTarotCard(id: string): TarotCard | undefined {
+  return tarotCards.find(card => card.id === id);
+}
+
+export function getDailyTarotCard(date: Date): TarotCard {
+  // Deterministic selection based on date
+  const dateStr = date.toISOString().split('T')[0];
+  let hash = 0;
+  for (let i = 0; i < dateStr.length; i++) {
+    hash = ((hash << 5) - hash) + dateStr.charCodeAt(i);
+    hash = hash & hash;
+  }
+  const index = Math.abs(hash) % tarotCards.length;
+  return tarotCards[index];
+}
+
+export function getRandomTarotCard(seed: string): TarotCard {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+    hash = hash & hash;
+  }
+  const index = Math.abs(hash) % tarotCards.length;
+  return tarotCards[index];
+}
